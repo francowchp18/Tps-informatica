@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+float calcularAreaRectangulo(float l, float h){
+	return l*h; 
+}
+float calcularPerimetroRectangulo(float l, float h){ 
+return 2*(l+h); 
+}
+float calcularAreaCirculo(float r){ 
+return 3.14*r*r; 
+}
+float calcularPerimetroCirculo(float r){ return 2*3.14*r; }
+
+void imprimirResultados(float area, float perimetro){
+	printf("Area: %.2f\n",area);
+	printf("Perimetro: %.2f\n",perimetro);
+}
+	
+	int main(){
+		
+		int op;
+		float l,h,r,area,perimetro;
+		
+		do{
+			printf("Seleccione una forma:\n");
+			printf("1- Rectangulo\n");
+			printf("2- Circulo\n");
+			scanf("%d",&op);
+			
+		}while(op!=1 && op!=2);
+		
+		if(op==1){
+			
+			printf("Ingrese longitud: ");
+			scanf("%f",&l);
+			
+			printf("Ingrese altura: ");
+			scanf("%f",&h);
+			
+			area=calcularAreaRectangulo(l,h);
+			perimetro=calcularPerimetroRectangulo(l,h);
+			
+		}else{
+			
+			printf("Ingrese radio: ");
+			scanf("%f",&r);
+			
+			area=calcularAreaCirculo(r);
+			perimetro=calcularPerimetroCirculo(r);
+		}
+		
+		imprimirResultados(area,perimetro);
+		
+		return 0;
+	}
