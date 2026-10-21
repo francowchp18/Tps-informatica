@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+	int Nota;
+	
+	printf("Ingresar calificacion : ");
+	scanf("%d", &Nota);
+	
+	if (Nota >= 90) {
+		printf("Calificacion: A\n");
+	} else if (Nota >= 80) {
+		printf("Calificacion: B\n");
+	} else if (Nota >= 70) {
+		printf("calificacion: C\n");
+	} else if (Nota >= 60) {
+		printf("calificacion: D\n");
+	} else {
+		printf("calificacion: F\n");
+	}
+	return 0;
+}
+
